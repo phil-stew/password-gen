@@ -5,8 +5,12 @@ var generateBtn = document.querySelector("#generate");
 function writePassword() {  
   
   var passLength = prompt("How long do you want you password")
+  var test = isNaN(passLength)
   
-  if (passLength < 8 || passLength > 129 || passLength == false ){
+ // learned that Javascript and Java core are different
+  console.log(test)
+
+  if  (test == true || passLength < 8 || passLength > 129 ){
       alert("Please try again");  
       return;
   }
@@ -109,7 +113,7 @@ function writePassword() {
       return password.substr(0,len);
    }}
 
-   if (aphla == true && num == true && specialC == true && aphlaHigh == false){
+  else if (aphla == true && num == true && specialC == true && aphlaHigh == false){
     function generatePassword( len ) {
       var length = (len)?(len):(passLength);
       var string = "abcdefghijklmnopqrstuvwxyz"; 
@@ -135,6 +139,7 @@ function writePassword() {
    
    else{
      alert(" You need to choose three of four options!!")
+     return
    }
 
 
@@ -143,7 +148,6 @@ function writePassword() {
      passwordText.value = password;
      
   }
-
 
 
 
