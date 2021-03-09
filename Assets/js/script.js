@@ -10,7 +10,7 @@ function writePassword() {
  // learned that Javascript and Java core are different
 
   if  (test == true || passLength < 8 || passLength > 129 ){
-      alert("Please try again");  
+      alert("Please try again you must have choose a password length between 8-128");  
       return;
   }
    
@@ -21,7 +21,7 @@ function writePassword() {
     var specialC = confirm("Do you what special characters" )
    };
 
-   
+
 
    if (aphla == true && num == true && specialC == true && aphlaHigh == true){
     function generatePassword( len ) {
