@@ -8,7 +8,6 @@ function writePassword() {
   var test = isNaN(passLength)
   
  // learned that Javascript and Java core are different
-  console.log(test)
 
   if  (test == true || passLength < 8 || passLength > 129 ){
       alert("Please try again");  
@@ -21,6 +20,8 @@ function writePassword() {
     var num = confirm(" Do you want numbers")
     var specialC = confirm("Do you what special characters" )
    };
+
+   
 
    if (aphla == true && num == true && specialC == true && aphlaHigh == true){
     function generatePassword( len ) {
@@ -44,8 +45,10 @@ function writePassword() {
       }
       password=password.split('').sort(function(){return 0.5-Math.random()}).join('');
       return password.substr(0,len);
+
   // found the function on stackoverflow https://stackoverflow.com/questions/1497481/javascript-password-generator
-   }} 
+
+  }} 
  
    else if(aphla == false && num == true && specialC == true && aphlaHigh == true){
     function generatePassword( len ) {
@@ -140,9 +143,8 @@ function writePassword() {
    else{
      alert(" You need to choose three of four options!!")
      return
+
    }
-
-
      var password = generatePassword(passLength)
      var passwordText = document.querySelector("#password");
      passwordText.value = password;
